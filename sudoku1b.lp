@@ -29,7 +29,7 @@ subgrid(X,Y,4) :- greaterthantwo(X), greaterthantwo(Y).
 
 sudoku(X,Y,Z) :- sudoku(X,Y,Z).
 
-#show subgrid/3.
+
 #show sudoku/3.
 
 
