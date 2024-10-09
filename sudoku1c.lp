@@ -33,8 +33,7 @@ subgrid(4,4,4).
 
 :- sudoku(X,C1,Z), sudoku(X,C2,Z), C1 < C2.
 
-:- subgrid(X1,Y1,G), subgridvals(X2,Y2,G), sudoku(X1,Y1,Z), 
-sudoku(X2,Y2,Z),  X1 != X2 , Y1 != Y2.
+:- subgrid(X1,Y1,G), subgrid(X2,Y2,G), sudoku(X1,Y1,Z), sudoku(X2,Y2,Z),  X1 != X2 , Y1 != Y2.
 
 1 { sudoku(X,Y,Z) : numbers(Z) } 4 :- grid(X,Y).
 
