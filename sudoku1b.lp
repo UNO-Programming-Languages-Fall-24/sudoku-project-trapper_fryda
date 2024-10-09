@@ -10,8 +10,8 @@ empty(X,Y) :- grid(X,Y), not sudoku(X,Y,_).
 accepted(X,Y,Z) :- empty(X,Y), numbers(Z).
 
 subgrid(X,Y,1) :- lessthantwo(X), lessthantwo(Y).
-subgrid(X,Y,2) :- greaterthantwo(X), lessthantwo(Y).
-subgrid(X,Y,3) :- lessthantwo(X), greaterthantwo(Y).
+subgrid(X,Y,2) :- lessthantwo(X), greaterthantwo(Y).
+subgrid(X,Y,3) :- greaterthantwo(X), lessthantwo(Y).
 subgrid(X,Y,4) :- greaterthantwo(X), greaterthantwo(Y).
  
 
