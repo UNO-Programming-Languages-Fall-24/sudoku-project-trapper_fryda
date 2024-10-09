@@ -64,7 +64,33 @@ subgrid(6,7,6).
 subgrid(6,8,6).
 subgrid(6,9,6).
 
-subgrid(7,1,7). 
+subgrid(7,1,7).
+subgrid(7,2,7).
+subgrid(7,3,7).
+subgrid(7,4,8).
+subgrid(7,5,8).
+subgrid(7,6,9).
+subgrid(7,7,9).
+subgrid(7,8,9).
+subgrid(7,9,9).
+subgrid(8,1,7).
+subgrid(8,2,7).
+subgrid(8,3,7).
+subgrid(8,4,8).
+subgrid(8,5,8).
+subgrid(8,6,8).
+subgrid(8,7,9).
+subgrid(8,8,9).
+subgrid(8,9,9).
+subgrid(9,1,7).
+subgrid(9,2,7).
+subgrid(9,3,7).
+subgrid(9,4,8).
+subgrid(9,5,8).
+subgrid(9,6,8).
+subgrid(9,7,9).
+subgrid(9,8,9).
+subgrid(9,9,9). 
  
 
 1 { sudoku(X,Y,Z) : accepted(X,Y,Z) } 1 :- empty(X,Y).
