@@ -69,7 +69,7 @@ subgrid(7,2,7).
 subgrid(7,3,7).
 subgrid(7,4,8).
 subgrid(7,5,8).
-subgrid(7,6,9).
+subgrid(7,6,8).
 subgrid(7,7,9).
 subgrid(7,8,9).
 subgrid(7,9,9).
