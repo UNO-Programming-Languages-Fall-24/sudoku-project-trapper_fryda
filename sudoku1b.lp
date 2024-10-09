@@ -15,7 +15,7 @@ subgrid(X,Y,2) :- X=3..4, Y=1..2.
 subgrid(X,Y,3) :- X=1..2, Y=3..4.
 subgrid(X,Y,4) :- X=3..4, Y=3..4.
 
-subgridcells(X,Y,G,Z) :- subgrid(X,Y,G), numbers(Z).
+subgridcells(X,Y,X1,Y2,G) :- subgrid(X,Y,G), subgrid(X1,Y1,G), X<X1, Y<Y1.
 
 1 { sudoku(X,Y,Z) : accepted(X,Y,Z) } 1 :- empty(X,Y).
 
@@ -23,7 +23,7 @@ subgridcells(X,Y,G,Z) :- subgrid(X,Y,G), numbers(Z).
 
 :- sudoku(X,C1,Z), sudoku(X,C2,Z), C1 < C2.
 
-:- subgridcells(X1,Y1,1,Z1), subgridcells(X2,Y2,1,Z2), (X1!=X2;Y!=Y2).
+:- sudoku(X1,Y1,Z), sudoku(X2,Y2,Z), subgridcells(X1,Y1,X2,Y2,G).
 
 1 { sudoku(X,Y,Z) : numbers(Z) } 4 :- grid(X,Y).
 1 { sudoku(X,Y,Z) : numbers(Z) } 4 :- grid(X,Y).
