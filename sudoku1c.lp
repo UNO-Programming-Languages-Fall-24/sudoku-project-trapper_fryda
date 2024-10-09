@@ -34,7 +34,7 @@ subgridvals(X,Y,G,Z) :- subgrid(X,Y,G), numbers(Z).
 
 :- sudoku(X,C1,Z), sudoku(X,C2,Z), C1 < C2.
 
-:- subgridvals(X1,Y1,G,Z), subgridvals(X2,Y2,G,Z), X1 != X2, Y1 != Y2.
+:- subgridvals(X1,Y1,G,Z), subgridvals(X2,Y2,G,Z), (X1 != X2 ; Y1 != Y2).
 
 1 { sudoku(X,Y,Z) : numbers(Z) } 4 :- grid(X,Y).
 
