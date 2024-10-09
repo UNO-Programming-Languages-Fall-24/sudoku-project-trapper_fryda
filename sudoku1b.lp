@@ -40,7 +40,7 @@ sudoku(X,Y,Z) :- sudoku(X,Y,Z).
 
 
 #show subgrid/3.
-#show sudoku/3
+#show sudoku/3.
 
 
 
