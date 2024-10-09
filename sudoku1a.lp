@@ -9,7 +9,15 @@
 grid(1..4, 1..4).
 numbers(1..4).
 
-gridval(X,Y,Z) :- grid(X,Y), numbers(Z)
+sudoku(X,Y,Z) :- initial(X,Y,Z).
+
+ininitial(X,Y) :- initial(X,Y,_).
+empty(X,Y) :- grid(X,Y), not ininitial(X,Y).
+
+accepted(X,Y,Z) :- empty(X,Y), numbers(Z)
+:- empty(X,Y), not (sudoku(X,Y,Z1) :- accepted(X,Y,Z1))
+
+%need constraints to check rows and columns 
 
 
 
