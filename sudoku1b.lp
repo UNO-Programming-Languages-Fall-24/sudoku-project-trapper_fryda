@@ -1,6 +1,6 @@
 grid(1..4, 1..4).
 numbers(1..4).
-lessthantwo(1..2).
+lessthantwo(0..2).
 greaterthantwo(3..4).
 
 sudoku(X,Y,Z) :- initial(X,Y,Z).
@@ -22,7 +22,7 @@ subgrid(X,Y,4) :- greaterthantwo(X), greaterthantwo(Y).
 :- sudoku(X,C1,Z), sudoku(X,C2,Z), C1 < C2.
 
 :- sudoku(X1,Y1,Z), sudoku(X2,Y2,Z), subgrid(X1,Y1,G), subgrid(X2,Y2,G), X1 != X2.
-:- sudoku(X1,Y1,Z), sudoku(X2,Y2,Z), subgrid(X1,Y1,G), subgrid(X2,Y2,G), Y1 != Y2.
+:- sudoku(X1,Y1,Z), sudok.
 
 1 { sudoku(X,Y,Z) : numbers(Z) } 4 :- grid(X,Y).
 
