@@ -1,4 +1,4 @@
-
+002
 
 grid(1..4, 1..4).
 numbers(1..4).
@@ -31,7 +31,17 @@ subgrid(X,Y,4) :- X=3..4, Y=3..4.
 
 sudoku(X,Y,Z) :- sudoku(X,Y,Z).
 
+#show subgrid/3.
 #show sudoku/3.
+
+
+
+
+
+
+
+
+
 
 
 
