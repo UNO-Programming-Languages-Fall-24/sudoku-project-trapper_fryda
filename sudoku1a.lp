@@ -12,7 +12,7 @@ accepted(X,Y,Z) :- empty(X,Y), numbers(Z).
 1 { sudoku(X,Y,Z) : accepted(X,Y,Z) } 1 :- empty(X,Y).
 
 :- sudoku(R1,Y,Z), sudoku(R2,Y,Z), R1 < R2.
-:- sudoku(X,C1,Z), sudoku(R2,C2,Z), C1 < C2.
+:- sudoku(X,C1,Z), sudoku(X,C2,Z), C1 < C2.
 1 { sudoku(X,Y,Z) : numbers(Z) } 4 :- grid(X,Y).
 1 { sudoku(X,Y,Z) : numbers(Z) } 4 :- grid(X,Y). 
 
