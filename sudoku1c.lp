@@ -28,13 +28,13 @@ subgrid(4,4,4).
 
 1 { sudoku(X,Y,Z) : accepted(X,Y,Z) } 1 :- empty(X,Y).
 
-subgridvals(X,Y,G,Z) :- subgrid(X,Y,G), numbers(Z).
 
 :- sudoku(R1,Y,Z), sudoku(R2,Y,Z), R1 < R2.
 
 :- sudoku(X,C1,Z), sudoku(X,C2,Z), C1 < C2.
 
-:- subgridvals(X1,Y1,G,Z), subgridvals(X2,Y2,G,Z), (X1 != X2 ; Y1 != Y2).
+:- subgrid(X1,Y1,G), subgridvals(X2,Y2,G), sudoku(X1,Y1,Z), 
+sudoku(X2,Y2,Z),  X1 != X2 , Y1 != Y2.
 
 1 { sudoku(X,Y,Z) : numbers(Z) } 4 :- grid(X,Y).
 
