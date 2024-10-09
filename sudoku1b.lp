@@ -9,10 +9,10 @@ empty(X,Y) :- grid(X,Y), not sudoku(X,Y,_).
 
 accepted(X,Y,Z) :- empty(X,Y), numbers(Z).
 
-subgrid(X,Y,1) :- X=1..2, Y=1..2.
-subgrid(X,Y,2) :- X=3..4, Y=1..2.
-subgrid(X,Y,3) :- X=1..2, Y=3..4.
-subgrid(X,Y,4) :- X=3..4, Y=3..4.
+subgrid(X,Y,1) :- X<=2, Y<=2.
+subgrid(X,Y,2) :- X>2, Y<=2.
+subgrid(X,Y,3) :- X<=2, Y>2.
+subgrid(X,Y,4) :- X>2, Y>2.
  
 
 1 { sudoku(X,Y,Z) : accepted(X,Y,Z) } 1 :- empty(X,Y).
@@ -24,7 +24,6 @@ subgrid(X,Y,4) :- X=3..4, Y=3..4.
 :- sudoku(X1,Y1,Z), sudoku(X2,Y2,Z), subgrid(X1,Y1,G), subgrid(X2,Y2,G), X1 != X2.
 :- sudoku(X1,Y1,Z), sudoku(X2,Y2,Z), subgrid(X1,Y1,G), subgrid(X2,Y2,G), Y1 != Y2.
 
-1 { sudoku(X,Y,Z) : numbers(Z) } 4 :- grid(X,Y).
 1 { sudoku(X,Y,Z) : numbers(Z) } 4 :- grid(X,Y).
 
 
